@@ -209,7 +209,9 @@ function createEnemies () {
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 `, SpriteKind.Tourelle)
-        bas = Math.randomRange(0, 1)
+        if (Math.percentChance(80)) {
+            bas = 1
+        }
         tourelle.setPosition(screenCenter.x + scene.screenWidth(), 120 * bas)
     }
 }
