@@ -1,7 +1,8 @@
 {
-    "name": "R-Type",
+    "name": "MySpaceShooter",
     "dependencies": {
-        "device": "*"
+        "device": "*",
+        "animation": "*"
     },
     "description": "",
     "files": [
@@ -10,6 +11,24 @@
         "README.md"
     ],
     "preferredEditor": "blocksprj",
+    "palette": [
+        "#000000",
+        "#2a0000",
+        "#78014f",
+        "#d50e55",
+        "#ed673a",
+        "#ffc75d",
+        "#03760b",
+        "#53b810",
+        "#c3ffe2",
+        "#8f11ba",
+        "#356ee2",
+        "#47c9ed",
+        "#59404b",
+        "#927691",
+        "#cb9cdc",
+        "#e427c6"
+    ],
     "testFiles": [
         "test.ts"
     ]
