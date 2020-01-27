@@ -1,5 +1,5 @@
 {
-    "name": "MySpaceShooter",
+    "name": "Lost in space",
     "dependencies": {
         "device": "*",
         "animation": "*"
