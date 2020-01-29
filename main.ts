@@ -483,6 +483,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.bulletType1, function (sprite, o
     bulletKind = 0
 })
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
+    music.playTone(392, music.beat(BeatFraction.Quarter))
     bomb = sprites.createProjectileFromSprite(img`
 . 4 4 4 . 
 4 5 5 5 4 
@@ -535,6 +536,7 @@ sprites.onOverlap(SpriteKind.myShoot, SpriteKind.Tourelle, function (sprite, oth
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (bulletKind == 0) {
+        music.playTone(587, music.beat(BeatFraction.Quarter))
         shoot = sprites.createProjectileFromSprite(img`
 . . . . . 5 5 5 5 5 . 
 . . 5 5 5 5 5 5 5 5 5 
@@ -546,6 +548,7 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
         pause(coolDown)
     } else {
         if (bulletKind == 1) {
+            music.playTone(622, music.beat(BeatFraction.Quarter))
             shoot = sprites.createProjectileFromSprite(img`
 . 5 . 
 5 7 5 
