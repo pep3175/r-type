@@ -423,9 +423,11 @@ function callBoss2 () {
     1000,
     true
     )
-    boss.setPosition(screenCenter.x + 65, 60)
-    bossHeart.setPosition(screenCenter.x + 65, 41)
     lifeBoss = 10
+    boss.setPosition(screenCenter.x + 95, 60)
+    bossHeart.setPosition(screenCenter.x + 95, 41)
+    boss.setVelocity(-20, 0)
+    bossHeart.setVelocity(-20, 0)
 }
 function createBonus () {
     if (Math.percentChance(5)) {
@@ -846,6 +848,14 @@ intitializeLevel()
 ship.setPosition(40, 60)
 ship.vx = 15
 controller.moveSprite(ship, 80, 80)
+game.onUpdate(function () {
+    if (bossCalled) {
+        if (boss.x == screenCenter.x + 65) {
+            boss.vx = 0
+            bossHeart.vx = 0
+        }
+    }
+})
 game.onUpdate(function () {
     if (screenCenter.x % 16 == 0) {
         if (!(built)) {
