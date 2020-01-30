@@ -483,7 +483,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.bulletType1, function (sprite, o
     bulletKind = 0
 })
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
-    music.playTone(392, music.beat(BeatFraction.Quarter))
+    music.pewPew.play()
     bomb = sprites.createProjectileFromSprite(img`
 . 4 4 4 . 
 4 5 5 5 4 
@@ -535,8 +535,8 @@ sprites.onOverlap(SpriteKind.myShoot, SpriteKind.Tourelle, function (sprite, oth
     info.changeScoreBy(20)
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    music.pewPew.play()
     if (bulletKind == 0) {
-        music.playTone(587, music.beat(BeatFraction.Quarter))
         shoot = sprites.createProjectileFromSprite(img`
 . . . . . 5 5 5 5 5 . 
 . . 5 5 5 5 5 5 5 5 5 
@@ -548,7 +548,6 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
         pause(coolDown)
     } else {
         if (bulletKind == 1) {
-            music.playTone(622, music.beat(BeatFraction.Quarter))
             shoot = sprites.createProjectileFromSprite(img`
 . 5 . 
 5 7 5 
@@ -895,6 +894,7 @@ game.onUpdate(function () {
         bossHeart.destroy()
         boss.destroy(effects.spray, 500)
         info.changeScoreBy(100)
+        music.powerUp.play()
         screenCenter.vx = 15
         ship.x = ship.x - 860
         intitializeLevel()
